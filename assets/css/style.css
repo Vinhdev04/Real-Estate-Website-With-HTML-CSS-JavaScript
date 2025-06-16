@@ -1,0 +1,151 @@
+/* NAVBAR */
+.nav {
+  padding: 10px 14px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--white-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-logo img {
+  width: 70px;
+}
+
+.navbar-links ul {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links li {
+  margin-left: 25px;
+}
+
+.navbar-links a {
+  color: var(--purple-color);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.navbar .login {
+  border: 1px solid var(--blue-color);
+  padding: 6px 16px;
+  color: var(--blue-color);
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.navbar .login:hover {
+  background-color: var(--blue-color);
+  color: #fff;
+}
+
+/* HERO SECTION */
+.main-content {
+  background: linear-gradient(to right, #f8f9fa, #e6f0fa);
+  padding: 60px 0;
+}
+
+.main-content h1 {
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: var(--purple-color);
+}
+
+.main-content p {
+  font-size: 1.1rem;
+  color: var(--purple-light);
+}
+
+/* FILTER CARD */
+.filter .btn-group .btn {
+  margin-right: 8px;
+  border: 1px solid #dee2e6;
+  font-weight: 500;
+}
+
+.filter input {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.filter .btn-outline-secondary {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #f8f9fa;
+  color: #888;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar-links ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-content h1 {
+    font-size: 2rem;
+  }
+
+  .main-content p {
+    font-size: 1rem;
+  }
+}
+/* Animation Effects */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover Effects */
+button:hover,
+.link:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.btn-outline-secondary:hover i {
+  transform: rotate(15deg);
+  transition: transform 0.3s ease;
+}
+
+/* Smooth transition */
+input,
+button,
+.btn {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Gradient hover on filter buttons */
+.filter .btn-group .btn:hover {
+  background: linear-gradient(to right, var(--blue-color), var(--purple-color));
+  color: white;
+  border-color: transparent;
+}
